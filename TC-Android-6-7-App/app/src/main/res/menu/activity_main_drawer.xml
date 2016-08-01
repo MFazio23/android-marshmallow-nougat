@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Marshmallow" android:checkableBehavior="single">
+        <menu>
+            <item
+                android:id="@+id/nav_mm_permissions"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Permissions" />
+            <item
+                android:id="@+id/nav_mm_doze"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Doze" />
+            <item
+                android:id="@+id/nav_mm_auto_backup"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Auto-Backup" />
+            <item
+                android:id="@+id/nav_mm_app_linking"
+                android:icon="@drawable/ic_menu_share"
+                android:title="App Linking" />
+            <item
+                android:id="@+id/nav_mm_fingerprint"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Fingerprint Reader" />
+        </menu>
+    </item>
+
+    <item android:title="Nougat" android:checkableBehavior="single">
+        <menu>
+            <item
+                android:id="@+id/nav_n_notifications"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Notifications" />
+            <item
+                android:id="@+id/nav_n_multi_window"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Multi-Window" />
+            <item
+                android:id="@+id/nav_n_data_saver"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Data Saver" />
+            <item
+                android:id="@+id/nav_n_quick_settings_tile"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Quick Settings Tile API" />
+        </menu>
+    </item>
+
+</menu>
