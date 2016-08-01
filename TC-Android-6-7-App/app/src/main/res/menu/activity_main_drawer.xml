@@ -5,7 +5,7 @@
         <menu>
             <item
                 android:id="@+id/nav_mm_permissions"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/ic_perm_device_information_black_24px"
                 android:title="Permissions" />
             <item
                 android:id="@+id/nav_mm_doze"
