@@ -10,6 +10,4 @@
 + Native API/Feature Support
 + OS Enhancements
 
-<img class="slide-os" src="img/android-marshmallow.png">
-
 Note:
