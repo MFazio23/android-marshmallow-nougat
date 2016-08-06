@@ -1,14 +1,23 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="org.faziodev.android67samples.fragments.nougat.NotificationsFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:id="@+id/test_text_view"
+        android:id="@+id/notification_header"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        android:textAlignment="center"
+        android:textColor="?attr/colorPrimaryDark"
+        android:text="Notification Samples" />
 
-</FrameLayout>
+    <ListView
+        android:id="@+id/notification_types_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

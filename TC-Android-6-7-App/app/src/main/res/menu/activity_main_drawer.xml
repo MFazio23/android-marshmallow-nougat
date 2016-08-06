@@ -30,7 +30,7 @@
         <menu>
             <item
                 android:id="@+id/nav_n_notifications"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/ic_announcement_black_24px"
                 android:title="Notifications" />
             <item
                 android:id="@+id/nav_n_multi_window"
