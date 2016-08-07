@@ -1,15 +1,16 @@
 package org.faziodev.android67samples.fragments.nougat;
 
+import android.app.Fragment;
 import android.app.Notification;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.app.RemoteInput;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Icon;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.NotificationManagerCompat;
-import android.support.v4.app.RemoteInput;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,7 @@ import android.widget.ListView;
 import org.faziodev.android67samples.MainActivity;
 import org.faziodev.android67samples.R;
 import org.faziodev.android67samples.adapters.NotificationItemsAdapter;
+import org.faziodev.android67samples.receivers.ToastReceiver;
 import org.faziodev.android67samples.types.NotificationListItem;
 
 import java.util.ArrayList;
@@ -28,10 +30,11 @@ public class NotificationsFragment extends Fragment {
 
     public static final String DIRECT_REPLY_KEY = "direct_reply_key";
 
-    private NotificationManagerCompat notificationManager = null;
+    private NotificationManager notificationManager = null;
     private List<String> groupedNotifications = new ArrayList<>();
 
     public NotificationsFragment() {
+
     }
 
     @Override
@@ -59,27 +62,29 @@ public class NotificationsFragment extends Fragment {
 
         list.add(new NotificationListItem("Basic Notification", "This will send a basic notification to the system.", R.drawable.ic_chat_bubble_black_24px));
         list.add(new NotificationListItem("Grouped Notification", "This will send a notification to the system that will be added to a group.", R.drawable.ic_announcement_black_24px, "group_notif", false));
-        list.add(new NotificationListItem("Direct Reply Notification", "This will send a notification to the system that will be added to a group.", R.drawable.ic_chat_black_24px));
+        list.add(new NotificationListItem("Direct Reply Notification", "This will send a notification to the system that will allow some kind of input from the user, right from the notification shade", R.drawable.ic_chat_black_24px, true));
 
         return list;
     }
 
     private void handleItemClicked(final NotificationListItem item) {
+        final int notificationId = (int) System.currentTimeMillis();
         if (this.notificationManager == null) {
-            this.notificationManager = NotificationManagerCompat.from(this.getActivity());
+            this.notificationManager = this.getContext().getSystemService(NotificationManager.class);
         }
-        final NotificationCompat.Builder notificationBuilder = this.createNotificationBuilder(this.getContext(), item);
+        final Notification.Builder notificationBuilder = this.createNotificationBuilder(this.getContext(), notificationId, item);
 
-        this.notificationManager.notify(item.getNotificationId(), notificationBuilder.build());
+        this.notificationManager.notify(notificationId, notificationBuilder.build());
     }
 
-    private NotificationCompat.Builder createNotificationBuilder(final Context context, final NotificationListItem item) {
+    private Notification.Builder createNotificationBuilder(final Context context, final int notificationId, final NotificationListItem item) {
 
         final Intent intent = new Intent(context, MainActivity.class);
-        intent.putExtra("Extra-NotificationId", item.getNotificationId());
-        final PendingIntent pendingIntent = PendingIntent.getActivity(this.getActivity(), 0, intent, 0);
+        intent.putExtra("Extra-NotificationId", notificationId);
+        intent.putExtra("ToastText", "Selected: " + item.getHeader());
+        final PendingIntent pendingIntent = PendingIntent.getBroadcast(this.getContext(), notificationId, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
-        final NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(context)
+        final Notification.Builder notificationBuilder = new Notification.Builder(context)
             .setDefaults(Notification.DEFAULT_ALL)
             .setSmallIcon(item.getIconId())
             .setContentTitle(item.getHeader())
@@ -92,8 +97,8 @@ public class NotificationsFragment extends Fragment {
             notificationBuilder.setGroup(item.getGroupName());
         }
 
-        if(item.isDirectReply()) {
-            final NotificationCompat.Action directReplyAction = this.getDirectReplyAction();
+        if (item.isDirectReply()) {
+            final Notification.Action directReplyAction = this.getDirectReplyAction(notificationId);
             notificationBuilder.addAction(directReplyAction);
         }
 
@@ -104,7 +109,7 @@ public class NotificationsFragment extends Fragment {
         //TODO: This isn't a great way to handle notification grouping as it doesn't know if notifications have been canceled.
         //      It's more just to illustrate that you need a summary, but not a lot of them.
         if (!this.groupedNotifications.contains(groupName)) {
-            final NotificationCompat.Builder builder = new NotificationCompat.Builder(this.getContext())
+            final Notification.Builder builder = new Notification.Builder(this.getContext())
                 .setSmallIcon(R.drawable.ic_question_answer_black_24px)
                 .setContentTitle(groupName)
                 .setGroup(groupName)
@@ -115,15 +120,17 @@ public class NotificationsFragment extends Fragment {
         }
     }
 
-    private NotificationCompat.Action getDirectReplyAction() {
+    private Notification.Action getDirectReplyAction(int notificationId) {
         final RemoteInput remoteInput = new RemoteInput.Builder(DIRECT_REPLY_KEY)
             .setLabel("Direct Reply")
             .build();
 
-        final Intent intent = new Intent(this.getContext(), MainActivity.class);
-        final PendingIntent pendingIntent = PendingIntent.getActivity(this.getActivity(), 0, intent, 0);
+        final Intent intent = new Intent();
+        intent.putExtra("NotificationId", notificationId);
+        intent.setAction(ToastReceiver.DIRECT_REPLY_INTENT);
+        final PendingIntent pendingIntent = PendingIntent.getBroadcast(this.getContext(), 123, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
-        return new NotificationCompat.Action.Builder(R.drawable.ic_menu_send, "Replying...", pendingIntent)
+        return new Notification.Action.Builder(Icon.createWithResource(this.getContext(), R.drawable.ic_menu_send), "Replying...", pendingIntent)
             .addRemoteInput(remoteInput)
             .build();
     }

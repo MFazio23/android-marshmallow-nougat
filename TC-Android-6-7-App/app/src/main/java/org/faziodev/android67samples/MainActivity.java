@@ -1,18 +1,15 @@
 package org.faziodev.android67samples;
 
+import android.app.Fragment;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.view.Gravity;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -20,7 +17,7 @@ import org.faziodev.android67samples.fragments.marshmallow.PermissionsFragment;
 import org.faziodev.android67samples.fragments.nougat.NotificationsFragment;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+    implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +28,7 @@ public class MainActivity extends AppCompatActivity
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+            this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         drawer.openDrawer(Gravity.LEFT);
@@ -80,7 +77,7 @@ public class MainActivity extends AppCompatActivity
         String title = "";
         int id = item.getItemId();
 
-        switch(id) {
+        switch (id) {
             case R.id.nav_mm_permissions:
                 selectedFragment = new PermissionsFragment();
                 title = "Marshmallow - Permissions";
@@ -91,8 +88,8 @@ public class MainActivity extends AppCompatActivity
                 break;
         }
 
-        if(selectedFragment != null) {
-            final FragmentTransaction transaction = this.getSupportFragmentManager().beginTransaction();
+        if (selectedFragment != null) {
+            final FragmentTransaction transaction = this.getFragmentManager().beginTransaction();
 
             transaction.replace(R.id.fragment_container, selectedFragment);
             transaction.addToBackStack(null);
@@ -100,7 +97,7 @@ public class MainActivity extends AppCompatActivity
             transaction.commit();
         }
 
-        if(this.getSupportActionBar() != null) {
+        if (this.getSupportActionBar() != null) {
             this.getSupportActionBar().setTitle(title);
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

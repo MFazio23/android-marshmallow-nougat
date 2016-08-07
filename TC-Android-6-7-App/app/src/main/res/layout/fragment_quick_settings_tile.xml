@@ -1,0 +1,20 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="org.faziodev.android67samples.fragments.nougat.QuickSettingsTileFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quick Settings Tile API"
+        android:textAlignment="center"
+        android:textSize="36sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quick Setting Tiles are located in the notification shade and are meant to complete urgently required or frequently used tasks.\n\nThis includes things like turning on/off a flashlight/WiFi/Do Not Disturb or showing someone their battery level.\n\nIt should not be used for shortcuts to launch an app.  We already have those, they're called shortcuts, and they live in the App Drawer or on pages."/>
+
+</LinearLayout>

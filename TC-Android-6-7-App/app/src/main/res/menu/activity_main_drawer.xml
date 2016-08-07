@@ -42,7 +42,7 @@
                 android:title="Data Saver" />
             <item
                 android:id="@+id/nav_n_quick_settings_tile"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/ic_widgets_black_24px"
                 android:title="Quick Settings Tile API" />
         </menu>
     </item>
