@@ -28,10 +28,10 @@
                 android:id="@+id/nav_n_notifications"
                 android:icon="@drawable/ic_announcement_black_24px"
                 android:title="Notifications" />
-            <item
+            <!--<item
                 android:id="@+id/nav_n_multi_window"
                 android:icon="@drawable/ic_chrome_reader_mode_black_24px"
-                android:title="Multi-Window" />
+                android:title="Multi-Window" />-->
             <item
                 android:id="@+id/nav_n_data_saver"
                 android:icon="@drawable/ic_data_usage_black_24px"
