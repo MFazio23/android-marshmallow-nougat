@@ -8,13 +8,14 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Quick Settings Tile API"
+        android:text="@string/quick_settings_tile_api_header"
+        android:textColor="@color/colorPrimaryDark"
         android:textAlignment="center"
         android:textSize="36sp"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Quick Setting Tiles are located in the notification shade and are meant to complete urgently required or frequently used tasks.\n\nThis includes things like turning on/off a flashlight/WiFi/Do Not Disturb or showing someone their battery level.\n\nIt should not be used for shortcuts to launch an app.  We already have those, they're called shortcuts, and they live in the App Drawer or on pages."/>
+        android:text="@string/quick_settings_tile_api_description"/>
 
 </LinearLayout>

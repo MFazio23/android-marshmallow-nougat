@@ -17,6 +17,8 @@ import org.faziodev.android67samples.fragments.marshmallow.AppLinkingFragment;
 import org.faziodev.android67samples.fragments.marshmallow.AutoBackupFragment;
 import org.faziodev.android67samples.fragments.marshmallow.DozeFragment;
 import org.faziodev.android67samples.fragments.marshmallow.PermissionsFragment;
+import org.faziodev.android67samples.fragments.nougat.DataSaverFragment;
+import org.faziodev.android67samples.fragments.nougat.MultiWindowFragment;
 import org.faziodev.android67samples.fragments.nougat.NotificationsFragment;
 import org.faziodev.android67samples.fragments.nougat.QuickSettingsTileFragment;
 
@@ -39,7 +41,7 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-    }
+    }/*
 
     @Override
     public void onBackPressed() {
@@ -71,7 +73,7 @@ public class MainActivity extends AppCompatActivity
         }
 
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -101,6 +103,14 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_n_notifications:
                 selectedFragment = new NotificationsFragment();
                 title = "N - Notifications";
+                break;
+            case R.id.nav_n_multi_window:
+                selectedFragment = new MultiWindowFragment();
+                title = "N - Multi-Window";
+                break;
+            case R.id.nav_n_data_saver:
+                selectedFragment = new DataSaverFragment();
+                title = "N - Data Saver";
                 break;
             case R.id.nav_n_quick_settings_tile:
                 selectedFragment = new QuickSettingsTileFragment();

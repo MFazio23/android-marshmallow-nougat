@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="org.faziodev.android67samples.fragments.nougat.DataSaverFragment">
+
+    <TextView
+        android:id="@+id/data_saver_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/data_saver_description"/>
+
+    <TextView
+        android:id="@+id/metered_connection_status"
+        android:text="@string/metered_connection_status_default"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/restrict_background_status"
+        android:text="@string/restrict_background_status_default"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/refresh_statuses"
+        android:text="@string/refresh_button"
+        android:textSize="18sp"
+        android:paddingTop="10dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
