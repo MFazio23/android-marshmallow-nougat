@@ -9,20 +9,16 @@
                 android:title="Permissions" />
             <item
                 android:id="@+id/nav_mm_doze"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/ic_battery_charging_full_black_24px"
                 android:title="Doze" />
             <item
                 android:id="@+id/nav_mm_auto_backup"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/ic_backup_black_24px"
                 android:title="Auto-Backup" />
             <item
                 android:id="@+id/nav_mm_app_linking"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/ic_link_black_24px"
                 android:title="App Linking" />
-            <item
-                android:id="@+id/nav_mm_fingerprint"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Fingerprint Reader" />
         </menu>
     </item>
 
@@ -34,11 +30,11 @@
                 android:title="Notifications" />
             <item
                 android:id="@+id/nav_n_multi_window"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/ic_chrome_reader_mode_black_24px"
                 android:title="Multi-Window" />
             <item
                 android:id="@+id/nav_n_data_saver"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/ic_data_usage_black_24px"
                 android:title="Data Saver" />
             <item
                 android:id="@+id/nav_n_quick_settings_tile"

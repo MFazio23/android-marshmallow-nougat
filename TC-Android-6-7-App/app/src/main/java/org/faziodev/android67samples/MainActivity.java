@@ -13,8 +13,12 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import org.faziodev.android67samples.fragments.marshmallow.AppLinkingFragment;
+import org.faziodev.android67samples.fragments.marshmallow.AutoBackupFragment;
+import org.faziodev.android67samples.fragments.marshmallow.DozeFragment;
 import org.faziodev.android67samples.fragments.marshmallow.PermissionsFragment;
 import org.faziodev.android67samples.fragments.nougat.NotificationsFragment;
+import org.faziodev.android67samples.fragments.nougat.QuickSettingsTileFragment;
 
 public class MainActivity extends AppCompatActivity
     implements NavigationView.OnNavigationItemSelectedListener {
@@ -80,11 +84,27 @@ public class MainActivity extends AppCompatActivity
         switch (id) {
             case R.id.nav_mm_permissions:
                 selectedFragment = new PermissionsFragment();
-                title = "Marshmallow - Permissions";
+                title = "MM - Permissions";
+                break;
+            case R.id.nav_mm_doze:
+                selectedFragment = new DozeFragment();
+                title = "MM - Doze + App Standby";
+                break;
+            case R.id.nav_mm_auto_backup:
+                selectedFragment = new AutoBackupFragment();
+                title = "MM - Auto-Backup";
+                break;
+            case R.id.nav_mm_app_linking:
+                selectedFragment = new AppLinkingFragment();
+                title = "MM - App Linking";
                 break;
             case R.id.nav_n_notifications:
                 selectedFragment = new NotificationsFragment();
-                title = "Nougat - Notifications";
+                title = "N - Notifications";
+                break;
+            case R.id.nav_n_quick_settings_tile:
+                selectedFragment = new QuickSettingsTileFragment();
+                title = "N - Quick Settings Tile API";
                 break;
         }
 
