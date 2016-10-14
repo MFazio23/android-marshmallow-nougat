@@ -26,8 +26,6 @@ public class DozeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-
         final View view = inflater.inflate(R.layout.fragment_doze, container, false);
 
         final TextView description = (TextView) view.findViewById(R.id.doze_description);

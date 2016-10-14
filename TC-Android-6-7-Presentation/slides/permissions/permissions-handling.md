@@ -1,7 +1,6 @@
 ## Handling Permissions
 
-<pre><code class="java slightly-smaller" data-noescape>
-// Assume thisActivity is the current activity
+<pre><code class="java slightly-smaller" data-noescape>// Assume thisActivity is the current activity
 final int readContactPermission
     = <span class="type-name">ContextCompat</span>.checkSelfPermission(thisActivity, <span class="type-name">Manifest</span>.permission.<span class="constant">READ_CONTACTS</span>)
     

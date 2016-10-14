@@ -1,7 +1,6 @@
 ##Developing for Doze
 
-<pre><code class="java" data-noescape>
-final <span class="type-name">AlarmManager</span> alarmManager = <span class="type-name">Context</span>.getSystemService(<span class="type-name">Context</span>.<span class="constant">ALARM_SERVICE</span>);
+<pre><code class="java" data-noescape>final <span class="type-name">AlarmManager</span> alarmManager = <span class="type-name">Context</span>.getSystemService(<span class="type-name">Context</span>.<span class="constant">ALARM_SERVICE</span>);
 
 final <span class="type-name">Intent</span> intent = new <span class="type-name">Intent</span>(ctx, <span class="type-name">AlarmReceiver</span>.class);
 

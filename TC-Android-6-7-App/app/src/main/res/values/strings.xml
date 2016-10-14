@@ -19,4 +19,6 @@
     <string name="metered_connection_status_default">Metered connection status is unknown.</string>
     <string name="restrict_background_status_default">Restrict background status is unknown.</string>
     <string name="refresh_button">Refresh</string>
+    <string name="multi_window_description"><![CDATA[Android now (natively) will handle multi-window, both side-by-side and top + bottom.  ]]></string>
+
 </resources>

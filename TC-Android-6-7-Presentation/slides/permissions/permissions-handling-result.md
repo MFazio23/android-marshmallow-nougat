@@ -1,7 +1,6 @@
 ## Handling Permissions
 
-<pre><code class="java slightly-smaller" data-noescape>
-public void onRequestPermissionsResult(int code, String permissions[], int[] results) {
+<pre><code class="java slightly-smaller" data-noescape>public void onRequestPermissionsResult(int code, String permissions[], int[] results) {
     switch (code) {
         case <span class="constant">MY_PERMISSIONS_REQUEST_READ_CONTACTS</span>: {
             // If request is cancelled, the result arrays are empty.
