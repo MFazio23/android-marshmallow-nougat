@@ -1,6 +1,8 @@
 ##JIT + AOT Compilation
 
-<img src="img/android-n-nlogo.jpg" height="500" />
++ JIT Compiler with Code Profiling
++ Profile-Guided Compilation for JIT/AOT
++ Quick Path to App Install
 
 Note:
 + JIT compiler with code profiling to ART (Android Run Time)
@@ -18,3 +20,6 @@ Note:
 + Quick Path to App Install
     + Large apps install much, MUCH faster
     + System updates are faster due to no optimizing step
++ Give example of BCycle app
+    + AOT vs. JIT
+    + Splitting APK into different CPUs

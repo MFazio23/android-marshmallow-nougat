@@ -11,3 +11,5 @@
 + OS Enhancements
 
 Note:
++ MM == 18.7% of Google Play Store visits
+    + As of September 5th

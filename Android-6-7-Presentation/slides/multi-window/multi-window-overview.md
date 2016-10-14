@@ -1,6 +1,11 @@
 ##Multi-Window
 
-<img src="img/mw-splitscreen.png" />
+<!--<img src="img/mw-splitscreen.png" />-->
+
+<video id="splitscreen-video" class="feature-video" height="600" preload="auto" loop="loop">
+  <source class="mp4" src="https://www.android.com/static/2016/videos/nougat/splitscreen.mp4" type="video/mp4">
+  <source class="webm" src="https://www.android.com/static/2016/videos/nougat/splitscreen.webm" type="video/webm">
+</video>
 
 Note:
 + Phone/tablet == split-screen

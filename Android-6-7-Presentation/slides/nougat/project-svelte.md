@@ -1,7 +1,12 @@
 ## Project Svelte
 ### Background Optimizations
 
-<img src="img/android-n-nlogo.jpg" height="500" />
++ Minimize RAM usage
++ Background jobs == JobScheduler
++ Restrictions
+    + CONNECTIVITY_ACTION
+    + ACTION_NEW_PICTURE
+    + ACTION_NEW_VIDEO
 
 Note:
 + Minimize RAM use by system/apps

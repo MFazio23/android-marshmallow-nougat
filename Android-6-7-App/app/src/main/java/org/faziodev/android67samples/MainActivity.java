@@ -103,10 +103,10 @@ public class MainActivity extends AppCompatActivity
                 selectedFragment = new NotificationsFragment();
                 title = "N - Notifications";
                 break;
-            case R.id.nav_n_multi_window:
+            /*case R.id.nav_n_multi_window:
                 selectedFragment = new MultiWindowFragment();
                 title = "N - Multi-Window";
-                break;
+                break;*/
             case R.id.nav_n_data_saver:
                 selectedFragment = new DataSaverFragment();
                 title = "N - Data Saver";

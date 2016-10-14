@@ -1,4 +1,5 @@
 Note:
++ Now called "screen search"
 + Press/Hold Home button on a page
 + Uses what's on screen for a web search
 + Click on title or bottom G -> Google Now

@@ -9,3 +9,4 @@ Note:
 + Dev Preview 4 - June '16 (Final APIs/Official SDK)
 + Dev Preview 5 - July '16 (Near-final system images)
 + Final Release - Q3 '16 (July - September)
+    + August 22nd, 2016

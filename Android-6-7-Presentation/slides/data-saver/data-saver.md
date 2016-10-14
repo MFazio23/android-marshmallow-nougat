@@ -1,6 +1,11 @@
 ##Data Saver
 
-<img src="img/nougat-data-saver-apps.png" height="500" />
+<!--<img src="img/nougat-data-saver-apps.png" height="500" />-->
+
+<video id="choose-video" class="feature-video" height="600" loop="loop" data-mobile-poster="https://www.android.com/static/2016/img/versions/nougat/datasaver-poster.jpg">
+    <source class="mp4" src="https://www.android.com/static/2016/videos/nougat/datasaver.mp4" type="video/mp4">
+    <source class="webm" src="https://www.android.com/static/2016/videos/nougat/datasaver.webm" type="video/webm">
+</video>
 
 Note:
 + Only active when Data Saver is turned on in settings + device is on a metered network

@@ -1,6 +1,11 @@
 ## Quick Settings
 
-<img src="img/quicksettings.png" height="500" />
+<!--<img src="img/quicksettings.png" height="500" />-->
+
+<video id="settings-video" class="feature-video" height="600" loop="loop" data-mobile-poster="https://www.android.com/static/2016/img/versions/nougat/settings-poster.jpg">
+    <source class="mp4" data-src="https://www.android.com//static/2016/videos/nougat/settings.mp4" type="video/mp4">
+    <source class="webm" data-src="https://www.android.com/static/2016/videos/nougat/settings.webm" type="video/webm">
+</video>
 
 Note:
 + In the _Notification Shade_

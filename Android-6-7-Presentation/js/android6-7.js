@@ -42,3 +42,20 @@ Reveal.initialize({
         }
     }]
 });
+
+Reveal.addEventListener('slidechanged', function (event) {
+    var video = event.currentSlide.getElementsByTagName('video');
+
+    if(video && video[0]) {
+        video[0].play();
+    }
+
+    if(event.previousSlide) {
+        var lastVideo = event.previousSlide.getElementsByTagName('video');
+
+        if (lastVideo && lastVideo[0]) {
+            lastVideo[0].pause();
+        }
+    }
+});
+
