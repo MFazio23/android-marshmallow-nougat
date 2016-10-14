@@ -1,7 +1,7 @@
 {
-  "name": "thatconference-android6.7",
+  "name": "android-marshmallow-nougat",
   "version": "1.0.0",
-  "description": "Presentation about Android 6.0 Marshmallow and Android 7.0 Nougat for ThatConference.",
+  "description": "Presentation about Android 6.0 Marshmallow and Android 7.0 Nougat.",
   "main": "server.js",
   "dependencies": {
     "bootstrap": "^3.3.5",
