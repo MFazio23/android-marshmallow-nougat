@@ -1,7 +1,6 @@
-##Notifications
-###Template Updates
+###Notifications - Template Updates
 
-<img src="img/notifications-3.png" height="500" />
+<img src="img/notifications-3.png" height="600" />
 
 Note:
 + New emphasis on hero image and avatar
